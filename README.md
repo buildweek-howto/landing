@@ -8,9 +8,9 @@
 
 1. An on-boarding process for a new general user (consumer).
 1. An on-boarding process for user who wants to generate content (creator).
-1. Ability to easily create & setup a how-to guide.
-1. Ability to easily edit & delete a how-to guide.
-1. Ability to easily view, search, find & filter how-to guides.
+1. Ability to easily create and setup a how-to guide.
+1. Ability to easily edit and delete a how-to guide.
+1. Ability to easily view, search, find and filter how-to guides.
 
 **Stretch**
 
