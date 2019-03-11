@@ -1,0 +1,44 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-panel {
+  margin: 0 auto 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .text-content {
+    max-width: 500px;
+    width: 40%;
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  img {
+    max-width: 500px;
+    width: 40%;
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+}
+
+.discover-content {
+  img {
+    order: -1;
+
+    @media (max-width: 500px) {
+      order: 0;
+    }
+  }
+}
