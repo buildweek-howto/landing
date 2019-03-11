@@ -9,7 +9,7 @@ html {
 }
 body {
   font-family: 'Lato', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.5;
 }
 h1 {
@@ -42,11 +42,15 @@ h2 {
   justify-content: space-between;
 }
 .navigation .navigation-logo {
-  padding: 30px 20px;
+  padding: 0px 20px;
 }
 .navigation .navigation-links {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+.navigation .navigation-links .navigation-link {
+  padding: 0 20px;
 }
 .navigation .navigation-cta {
   display: flex;
@@ -54,7 +58,7 @@ h2 {
   align-items: center;
 }
 .navigation .navigation-cta-login {
-  margin-right: 30px;
+  padding: 0px 20px;
 }
 .navigation .navigation-cta-signup {
   border: 1px solid #212529;
@@ -63,7 +67,7 @@ h2 {
   border-radius: 10px;
   padding: 12px 10px;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 .navigation .navigation-cta-signup:hover {
   background-color: #FFFFFF;
@@ -116,7 +120,7 @@ footer button {
   border-radius: 10px;
   padding: 12px 10px;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 footer button:hover {
   background-color: #FFFFFF;
