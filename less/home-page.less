@@ -1,5 +1,5 @@
 .container {
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -15,21 +15,35 @@
 
     h2 {
       margin-bottom: 10px;
+
+      @media @mobile {
+        font-size: 3.6rem;
+      }
     }
 
     p {
       margin-bottom: 20px;
+    }
+
+    @media @mobile {
+      width: 60%;
     }
   }
 
   img {
     max-width: 500px;
     width: 40%;
+
+    @media @mobile {
+      width: 60%;
+    }
   }
 
   @media @mobile {
     flex-direction: column;
-    margin-bottom: 40px;
+    margin: 0 60px 40px;
+    width: 100%;
+    align-items: flex-start;
   }
 }
 
