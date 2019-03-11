@@ -1,0 +1,50 @@
+footer {
+  background: @bg-footer;
+  width: 100%;
+  padding: 80px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    margin: 0 auto 40px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    margin-bottom: 40px;
+
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    a {
+      color: @font-color-button;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      @media @mobile {
+      margin-bottom: 20px;
+      
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    }
+  }
+
+  button {
+    .btn-cta();  
+  }
+}
