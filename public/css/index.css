@@ -80,6 +80,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 25px;
 }
 footer img {
   margin: 0 auto 40px;
@@ -107,6 +108,7 @@ footer nav a:hover {
 }
 @media (max-width: 500px) {
   footer nav a {
+    font-size: 2.4rem;
     margin-bottom: 20px;
   }
   footer nav a:last-of-type {
@@ -126,8 +128,14 @@ footer button:hover {
   background-color: #FFFFFF;
   color: #212529;
 }
+@media (max-width: 500px) {
+  footer button {
+    font-size: 2rem;
+    padding: 24px 40px;
+  }
+}
 .container {
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
 }
 .content-panel {
@@ -143,17 +151,34 @@ footer button:hover {
 .content-panel .text-content h2 {
   margin-bottom: 10px;
 }
+@media (max-width: 500px) {
+  .content-panel .text-content h2 {
+    font-size: 3.6rem;
+  }
+}
 .content-panel .text-content p {
   margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  .content-panel .text-content {
+    width: 60%;
+  }
 }
 .content-panel img {
   max-width: 500px;
   width: 40%;
 }
 @media (max-width: 500px) {
+  .content-panel img {
+    width: 60%;
+  }
+}
+@media (max-width: 500px) {
   .content-panel {
     flex-direction: column;
-    margin-bottom: 40px;
+    margin: 0 60px 40px;
+    width: 100%;
+    align-items: flex-start;
   }
 }
 .discover-content img {

@@ -7,6 +7,9 @@ footer {
   flex-direction: column;
   align-items: center;
 
+  //Still figuring out how to get background color to extend; for now...
+  border-radius: 25px;
+  
   img {
     margin: 0 auto 40px;
     max-width: 500px;
@@ -35,6 +38,7 @@ footer {
       }
 
       @media @mobile {
+      font-size: 2.4rem;
       margin-bottom: 20px;
       
       &:last-of-type {
@@ -45,6 +49,11 @@ footer {
   }
 
   button {
-    .btn-cta();  
+    .btn-cta();
+
+    @media @mobile {
+      font-size: 2rem;
+      padding: 24px 40px;
+  }
   }
 }
