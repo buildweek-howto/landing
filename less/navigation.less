@@ -17,30 +17,30 @@
     .navigation-link {
       color: @font-color-content;
       text-decoration: none;
-      margin: 0 20px;
+      padding: 12px 20px;
 
       &:hover {
-        text-decoration: underline;
-        color: @secondary;
+        color: @white;
+        background-color: @primary;
       }
 
       @media @mobile {
         display: none;
       }
-      @media @tablet {
-        display: none;
-      }
+      // @media @tablet {
+      //   display: none;
+      // }
     }
-  }
+  } // .navigation-links
 
   .navigation-hamburger-button {
     display: none;
     @media @mobile {
       display: block;
     }
-    @media @tablet {
-      display: block;
-    }
+    // @media @tablet {
+    //   display: block;
+    // }
     .hide {
       display: none;
     }
@@ -62,30 +62,38 @@
     @media @tablet {
       display: none;
     }
+    @media @desktop {
+      display: none;
+    }
     a {
       text-decoration: none;
     }
-  }
 
-  .navigation-cta-login {
-    color: @font-color-content;
-    padding: 0px 20px;
+    .navigation-cta-login {
+      color: @font-color-content;
+      padding: 12px 20px;
 
-    &:hover {
-      text-decoration: underline;
-      color: @secondary;
+      &:hover {
+        color: @white;
+        background-color: @secondary;
+        border-radius: 20px;
+      }
     }
-  }
+    .navigation-cta-signup {
+      .btn-cta-normal();
+    }
+  } // .navigation-cta
 
-  .navigation-cta-signup {
-    .btn-cta-normal();
-    cursor: pointer;
+  @media @tablet{
+    flex-direction: column;
+    align-items: center;
   }
-
   @media @mobile {
     margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
   }
-}
+} // .navigation
 
 .navigation-links-mobile {
   display: none;
@@ -95,6 +103,7 @@
   display: flex;
 }
 
+// MOBILE MENU
 .navigation-links-mobile {
   top: 60px;
   width: 100%;
@@ -105,10 +114,28 @@
   .navigation-link-mobile {
     width: 100%;
     text-align: center;
+    text-decoration: none;
     margin: 0 auto;
-    padding: 10px 0;
-    border-bottom: 1px solid @dark-grey;
+    padding: 25px 0;
+    border-bottom: 1px solid @white;
+    color: @white;
     background-color: @primary;
+
+    &:last-child {
+      background-color: @danger;
+      color: @white;
+      &:hover {
+        color: @danger
+      }
+    }
+
+    &:nth-last-child(2) {
+      background-color: @secondary;
+      color: @white;
+      &:hover {
+        color: @secondary;
+      }
+    }
 
     &:hover {
       background-color: @white;
@@ -119,4 +146,4 @@
   .navigation-link-mobile:last-child {
     border: none;
   }
-}
+} // navigation-links-mobile

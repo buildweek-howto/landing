@@ -1,11 +1,11 @@
 .team {
-  margin: 60px 0;
-
-  @media @mobile {
-    .mobile-margin();
-  }
+  padding: 60px 0;
+  
   .team-title {
     text-align: center;
+    & h2 {
+      margin-bottom: 15px;
+    }
   }
 
   .team-cards {
@@ -14,14 +14,13 @@
     justify-content: center;
 
     .team-card {
-      width: 250px;
-      margin: 5px 20px;
+      // width: 300px;
+      padding: 40px 60px;
       text-align: center;
 
       .team-member-title {
         margin: 0;
-        //bold
-        // import new font weight
+        font-weight: 400;
       }
       .team-member-name {
         margin: 0;
@@ -33,6 +32,17 @@
         max-width: 140px;
         height: auto;
       }
+      @media @tablet {
+        padding: 30px 0;
+        width: 50%;
+      }
+      @media @mobile {
+        padding: 15px 30px;
+        width: 50%;
+      }
     }
+  }
+  @media @mobile {
+    padding: 40px 0;
   }
 }

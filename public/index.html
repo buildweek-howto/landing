@@ -25,7 +25,9 @@
       <header class="header">
         <nav class="navigation">
           <div class="navigation-logo">
-            <img src="./assets/how-to-logo.svg" alt="How to logo" />
+            <a href="index.html">
+              <img src="./assets/how-to-logo.svg" alt="How to logo" />
+            </a>
           </div>
           <div class="navigation-links">
             <a href="#learn" class="navigation-link">Learn</a>
@@ -51,13 +53,21 @@
             </a>
           </div>
           <div class="navigation-links-mobile">
-            <div class="navigation-link-mobile">Learn</div>
-            <div class="navigation-link-mobile">Discover</div>
-            <div class="navigation-link-mobile">Contribute</div>
-            <div class="navigation-link-mobile">Features</div>
-            <div class="navigation-link-mobile">Team</div>
-            <div class="navigation-link-mobile">Login</div>
-            <div class="navigation-link-mobile">Sign Up</div>
+            <a href="#learn" class="navigation-link-mobile">Learn</a>
+            <a href="#discover" class="navigation-link-mobile">Discover</a>
+            <a href="#contribute" class="navigation-link-mobile">Contribute</a>
+            <a href="#features" class="navigation-link-mobile">Features</a>
+            <a href="#team" class="navigation-link-mobile">Team</a>
+            <a
+              href="https://howto-frontend.netlify.com/login"
+              class="navigation-link-mobile"
+              >Login</a
+            >
+            <a
+              href="https://howto-frontend.netlify.com/signup"
+              class="navigation-link-mobile"
+              >Sign Up</a
+            >
           </div>
         </nav>
         <div class="header-main">
@@ -72,9 +82,20 @@
                 A community of high achievers and scholars that prioritize
                 learning everyday.
               </p>
-              <a href="https://howto-frontend.netlify.com/signup">
-                <button class="header-description-joinnow">Join Now</button>
-              </a>
+              <div class="header-description-button-container">
+                <a
+                  class="header-description-joinnow-anchor"
+                  href="https://howto-frontend.netlify.com/signup"
+                  ><button class="header-description-joinnow">
+                    Join Now
+                  </button></a
+                >
+                <a
+                  class="header-description-login-anchor"
+                  href="https://howto-frontend.netlify.com/login"
+                  ><button class="header-description-login">Login</button></a
+                >
+              </div>
             </div>
           </div>
           <div class="header-image">
@@ -86,7 +107,14 @@
           </div>
         </div>
       </header>
-      <section class="content-panel reverse" id="learn">
+      <section class="content-panel" id="learn">
+        <div class="content-image image-straight">
+          <img
+            class="content-image-img"
+            src="./assets/learn-image-color-001.svg"
+            alt="A person leaning against a very large cell phone"
+          />
+        </div>
         <div class="content-text">
           <h2>Learn</h2>
           <p>
@@ -106,15 +134,15 @@
             your overall recall.
           </p>
         </div>
+      </section>
+      <section class="content-panel reverse" id="discover">
         <div class="content-image image-reverse">
           <img
             class="content-image-img"
-            src="./assets/learn-image-color-001.svg"
-            alt="A person leaning against a very large cell phone"
+            src="./assets/discover-image-color-001.svg"
+            alt="A person in the center ofa swirl of documents"
           />
         </div>
-      </section>
-      <section class="content-panel" id="discover">
         <div class="content-text">
           <h2>Discover</h2>
           <p>
@@ -134,15 +162,15 @@
             your overall recall.
           </p>
         </div>
+      </section>
+      <section class="content-panel" id="contribute">
         <div class="content-image image-straight">
           <img
             class="content-image-img"
-            src="./assets/discover-image-color-001.svg"
-            alt="A person in the center ofa swirl of documents"
+            src="./assets/contribute-image-color-001.svg"
+            alt="A person pinning screenshots to a wall"
           />
         </div>
-      </section>
-      <section class="content-panel reverse" id="contribute">
         <div class="content-text">
           <h2>Contribute</h2>
           <p>
@@ -162,46 +190,63 @@
             your overall recall.
           </p>
         </div>
-        <div class="content-image image-reverse">
-          <img
-            class="content-image-img"
-            src="./assets/contribute-image-color-001.svg"
-            alt="A person pinning screenshots to a wall"
-          />
-        </div>
       </section>
       <section class="team" id="team">
         <div class="team-title"><h2>Meet The Team</h2></div>
         <div class="team-cards">
           <div class="team-card">
-            <img class="team-img" src="./assets/thomas-team-lead.jpg" alt="" />
+            <img
+              class="team-img"
+              src="./assets/team/thomas-greenhalgh.jpg"
+              alt=""
+            />
             <p class="team-member-name">Thomas Greenhalgh</p>
             <p class="team-member-title">Lead Software Engineer</p>
           </div>
           <div class="team-card">
-            <img class="team-img" src="./assets/thomas-team-lead.jpg" alt="" />
-            <p class="team-member-name">Thomas Greenhalgh</p>
-            <p class="team-member-title">Lead Software Engineer</p>
+            <img
+              class="team-img"
+              src="./assets/team/kayanna-chandler.jpg"
+              alt=""
+            />
+            <p class="team-member-name">Kayanna Chandler</p>
+            <p class="team-member-title">Back End Software Engineer</p>
           </div>
           <div class="team-card">
-            <img class="team-img" src="./assets/thomas-team-lead.jpg" alt="" />
-            <p class="team-member-name">Thomas Greenhalgh</p>
-            <p class="team-member-title">Lead Software Engineer</p>
+            <img
+              class="team-img"
+              src="./assets/team/jonathan-picazo.jpg"
+              alt=""
+            />
+            <p class="team-member-name">Jonathan Picazo</p>
+            <p class="team-member-title">Front End Software Engineer</p>
           </div>
           <div class="team-card">
-            <img class="team-img" src="./assets/thomas-team-lead.jpg" alt="" />
-            <p class="team-member-name">Thomas Greenhalgh</p>
-            <p class="team-member-title">Lead Software Engineer</p>
+            <img
+              class="team-img"
+              src="./assets/team/thomas-folbrecht.jpg"
+              alt=""
+            />
+            <p class="team-member-name">Thomas Folbrecht</p>
+            <p class="team-member-title">Front End Software Engineer</p>
           </div>
           <div class="team-card">
-            <img class="team-img" src="./assets/thomas-team-lead.jpg" alt="" />
-            <p class="team-member-name">Thomas Greenhalgh</p>
-            <p class="team-member-title">Lead Software Engineer</p>
+            <img
+              class="team-img"
+              src="./assets/team/daniel-oneill.jpg"
+              alt=""
+            />
+            <p class="team-member-name">Daniel O'Neill</p>
+            <p class="team-member-title">Web UI Software Engineer</p>
           </div>
           <div class="team-card">
-            <img class="team-img" src="./assets/thomas-team-lead.jpg" alt="" />
-            <p class="team-member-name">Thomas Greenhalgh</p>
-            <p class="team-member-title">Lead Software Engineer</p>
+            <img
+              class="team-img"
+              src="./assets/team/christian-ipanaque.jpg"
+              alt=""
+            />
+            <p class="team-member-name">Christian Ipanaque</p>
+            <p class="team-member-title">Web UI Software Engineer</p>
           </div>
         </div>
       </section>
