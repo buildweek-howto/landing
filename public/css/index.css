@@ -32,13 +32,18 @@ p {
   display: flex;
   flex-direction: column;
 }
+.header h1 {
+  line-height: 1.1;
+}
 .header .header-main {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 60px 0 100px 0;
 }
 @media (max-width: 768px) {
   .header .header-main {
+    padding: 20px 0 40px 0;
     justify-content: space-between;
   }
 }
@@ -52,13 +57,29 @@ p {
   flex-direction: column;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .header .header-description-container .header-description {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .header .header-description-container .header-description-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.header .header-description-container .header-description-joinnow-anchor {
+  margin: 20px auto;
+}
 .header .header-description-container .header-description-joinnow {
   border: 1px solid #2ec4b6;
   background-color: #2ec4b6;
   color: #ffffff;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 12px 10px;
-  width: 150px;
+  width: 180px;
   text-align: center;
   font-size: 1.6rem;
   cursor: pointer;
@@ -67,32 +88,44 @@ p {
   background-color: #ffffff;
   color: #2ec4b6;
 }
-@media (max-width: 768px) {
-  .header .header-description-container h1 {
-    font-size: 4.8rem;
-    margin-bottom: 40px;
-  }
-  .header .header-description-container p {
-    display: none;
-  }
+.header .header-description-container .header-description-login-anchor {
+  display: none;
+  text-decoration: none;
 }
 @media (max-width: 500px) {
-  .header .header-description-container p {
+  .header .header-description-container .header-description-login-anchor {
     display: block;
+  }
+}
+.header .header-description-container .header-description-login {
+  display: none;
+}
+@media (max-width: 500px) {
+  .header .header-description-container .header-description-login {
+    display: block;
+    border: 1px solid #2ec4b6;
+    background-color: #2ec4b6;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 12px 10px;
+    width: 180px;
+    text-align: center;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+  .header .header-description-container .header-description-login:hover {
+    background-color: #ffffff;
+    color: #2ec4b6;
   }
 }
 .header .header-image-img {
   width: 100%;
   height: auto;
-}
-@media (max-width: 768px) {
-  .header .header-image-img {
-    margin-left: 12.5%;
-  }
+  padding-left: 12.5%;
 }
 @media (max-width: 500px) {
   .header .header-image-img {
-    margin: 0 auto;
+    padding: 0;
   }
 }
 .navigation {
@@ -113,18 +146,13 @@ p {
 .navigation .navigation-links .navigation-link {
   color: #212529;
   text-decoration: none;
-  margin: 0 20px;
+  padding: 12px 20px;
 }
 .navigation .navigation-links .navigation-link:hover {
-  text-decoration: underline;
-  color: #586ba4;
+  color: #ffffff;
+  background-color: #2ec4b6;
 }
 @media (max-width: 500px) {
-  .navigation .navigation-links .navigation-link {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
   .navigation .navigation-links .navigation-link {
     display: none;
   }
@@ -133,11 +161,6 @@ p {
   display: none;
 }
 @media (max-width: 500px) {
-  .navigation .navigation-hamburger-button {
-    display: block;
-  }
-}
-@media (max-width: 768px) {
   .navigation .navigation-hamburger-button {
     display: block;
   }
@@ -166,34 +189,49 @@ p {
     display: none;
   }
 }
+@media (max-width: 960px) {
+  .navigation .navigation-cta {
+    display: none;
+  }
+}
 .navigation .navigation-cta a {
   text-decoration: none;
 }
-.navigation .navigation-cta-login {
+.navigation .navigation-cta .navigation-cta-login {
   color: #212529;
-  padding: 0px 20px;
+  padding: 12px 20px;
 }
-.navigation .navigation-cta-login:hover {
-  text-decoration: underline;
-  color: #586ba4;
+.navigation .navigation-cta .navigation-cta-login:hover {
+  color: #ffffff;
+  background-color: #586ba4;
+  border-radius: 20px;
 }
-.navigation .navigation-cta-signup {
+.navigation .navigation-cta .navigation-cta-signup {
   border: 1px solid #2ec4b6;
   background-color: #2ec4b6;
   color: #ffffff;
-  border-radius: 10px;
-  padding: 12px 10px;
+  border-radius: 20px;
+  padding: 12px 20px;
+  width: 100px;
   text-align: center;
   font-size: 1.6rem;
   cursor: pointer;
 }
-.navigation .navigation-cta-signup:hover {
+.navigation .navigation-cta .navigation-cta-signup:hover {
   background-color: #ffffff;
   color: #2ec4b6;
+}
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 @media (max-width: 500px) {
   .navigation {
     margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 .navigation-links-mobile {
@@ -212,10 +250,26 @@ p {
 .navigation-links-mobile .navigation-link-mobile {
   width: 100%;
   text-align: center;
+  text-decoration: none;
   margin: 0 auto;
-  padding: 10px 0;
-  border-bottom: 1px solid #444444;
+  padding: 25px 0;
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
   background-color: #2ec4b6;
+}
+.navigation-links-mobile .navigation-link-mobile:last-child {
+  background-color: #ff6b6b;
+  color: #ffffff;
+}
+.navigation-links-mobile .navigation-link-mobile:last-child:hover {
+  color: #ff6b6b;
+}
+.navigation-links-mobile .navigation-link-mobile:nth-last-child(2) {
+  background-color: #586ba4;
+  color: #ffffff;
+}
+.navigation-links-mobile .navigation-link-mobile:nth-last-child(2):hover {
+  color: #586ba4;
 }
 .navigation-links-mobile .navigation-link-mobile:hover {
   background-color: #ffffff;
@@ -225,15 +279,13 @@ p {
   border: none;
 }
 .team {
-  margin: 60px 0;
-}
-@media (max-width: 500px) {
-  .team {
-    margin: 20px 12.5%;
-  }
+  padding: 60px 0;
 }
 .team .team-title {
   text-align: center;
+}
+.team .team-title h2 {
+  margin-bottom: 15px;
 }
 .team .team-cards {
   display: flex;
@@ -241,12 +293,12 @@ p {
   justify-content: center;
 }
 .team .team-cards .team-card {
-  width: 250px;
-  margin: 5px 20px;
+  padding: 40px 60px;
   text-align: center;
 }
 .team .team-cards .team-card .team-member-title {
   margin: 0;
+  font-weight: 400;
 }
 .team .team-cards .team-card .team-member-name {
   margin: 0;
@@ -256,6 +308,23 @@ p {
   width: 100%;
   max-width: 140px;
   height: auto;
+}
+@media (max-width: 768px) {
+  .team .team-cards .team-card {
+    padding: 30px 0;
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .team .team-cards .team-card {
+    padding: 15px 30px;
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .team {
+    padding: 40px 0;
+  }
 }
 footer {
   background: #2ec4b6;
@@ -318,9 +387,9 @@ footer button {
   border: 1px solid #586ba4;
   background-color: #586ba4;
   color: #ffffff;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 12px 10px;
-  width: 150px;
+  width: 180px;
   text-align: center;
   font-size: 1.6rem;
   cursor: pointer;
@@ -341,12 +410,17 @@ footer button:hover {
 }
 @media (max-width: 768px) {
   .container {
-    margin: 0 7.5%;
+    margin: 0 4%;
   }
 }
 @media (max-width: 500px) {
   .container {
-    margin: 20px 12.5%;
+    margin: 0 4%;
+  }
+}
+@media (max-width: 960px) {
+  .container {
+    margin: 0 4%;
   }
 }
 .content-panel {
@@ -354,24 +428,14 @@ footer button:hover {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  margin: 60px 0;
+  background-color: #f7fff7;
+  padding: 120px 0;
 }
-@media (max-width: 768px) {
-  .content-panel .image-straight {
-    margin-left: 7.5%;
-  }
-  .content-panel .image-reverse {
-    margin-right: 7.5%;
-  }
+.content-panel .image-straight {
+  padding-right: 7.5%;
 }
-@media (max-width: 500px) {
-  .content-panel {
-    flex-direction: column;
-  }
-  .content-panel .image-straight,
-  .content-panel .image-reverse {
-    margin: 0 auto;
-  }
+.content-panel .image-reverse {
+  padding-left: 7.5%;
 }
 .content-panel .content-text {
   width: 500px;
@@ -390,8 +454,15 @@ footer button:hover {
   width: 100%;
   height: auto;
 }
+@media (max-width: 500px) {
+  .content-panel {
+    flex-direction: column;
+    padding: 60px 0;
+  }
+}
 .reverse {
   flex-direction: row-reverse;
+  background-color: #ffffff;
 }
 @media (max-width: 500px) {
   .reverse {
