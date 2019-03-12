@@ -61,6 +61,7 @@ p {
   width: 150px;
   text-align: center;
   font-size: 1.6rem;
+  cursor: pointer;
 }
 .header .header-description-container .header-description-joinnow:hover {
   background-color: #ffffff;
@@ -112,7 +113,11 @@ p {
 .navigation .navigation-links .navigation-link {
   color: #212529;
   text-decoration: none;
-  padding: 0 20px;
+  margin: 0 20px;
+}
+.navigation .navigation-links .navigation-link:hover {
+  text-decoration: underline;
+  color: #586ba4;
 }
 @media (max-width: 500px) {
   .navigation .navigation-links .navigation-link {
@@ -168,6 +173,10 @@ p {
   color: #212529;
   padding: 0px 20px;
 }
+.navigation .navigation-cta-login:hover {
+  text-decoration: underline;
+  color: #586ba4;
+}
 .navigation .navigation-cta-signup {
   border: 1px solid #2ec4b6;
   background-color: #2ec4b6;
@@ -176,6 +185,7 @@ p {
   padding: 12px 10px;
   text-align: center;
   font-size: 1.6rem;
+  cursor: pointer;
 }
 .navigation .navigation-cta-signup:hover {
   background-color: #ffffff;
@@ -276,6 +286,11 @@ footer nav {
   width: 60%;
   margin-bottom: 40px;
 }
+@media (max-width: 768px) {
+  footer nav {
+    width: 100%;
+  }
+}
 @media (max-width: 500px) {
   footer nav {
     flex-direction: column;
@@ -288,6 +303,7 @@ footer nav a {
 }
 footer nav a:hover {
   text-decoration: underline;
+  color: #586ba4;
 }
 @media (max-width: 500px) {
   footer nav a {
@@ -307,6 +323,7 @@ footer button {
   width: 150px;
   text-align: center;
   font-size: 1.6rem;
+  cursor: pointer;
 }
 footer button:hover {
   background-color: #ffffff;
