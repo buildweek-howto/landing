@@ -17,7 +17,13 @@
     .navigation-link {
       color: @font-color-content;
       text-decoration: none;
-      padding: 0 20px;
+      margin: 0 20px;
+
+      &:hover {
+        text-decoration: underline;
+        color: @secondary;
+      }
+
       @media @mobile {
         display: none;
       }
@@ -35,10 +41,10 @@
     @media @tablet {
       display: block;
     }
-    .hide{
+    .hide {
       display: none;
     }
-    .display{
+    .display {
       background-color: red;
     }
     .close {
@@ -64,10 +70,16 @@
   .navigation-cta-login {
     color: @font-color-content;
     padding: 0px 20px;
+
+    &:hover {
+      text-decoration: underline;
+      color: @secondary;
+    }
   }
 
   .navigation-cta-signup {
     .btn-cta-normal();
+    cursor: pointer;
   }
 
   @media @mobile {
@@ -100,7 +112,7 @@
 
     &:hover {
       background-color: @white;
-      color: @primary
+      color: @primary;
     }
   }
 
