@@ -10,7 +10,7 @@
     <link
       rel="shortcut icon"
       type="image/png"
-      href="./assets/favicon-how-to.JPG"
+      href="./assets/favicon-how-to.jpg"
     />
     <!-- Favicon End -->
     <!-- Fonts -->
@@ -28,11 +28,12 @@
             <img src="./assets/how-to-logo.svg" alt="How to logo" />
           </div>
           <div class="navigation-links">
-            <div class="navigation-link">Learn</div>
-            <div class="navigation-link">Discover</div>
-            <div class="navigation-link">Contribute</div>
-            <div class="navigation-link">Features</div>
-            <div class="navigation-link">Team</div>
+            <a href="#" class="navigation-link">Learn</a>
+            <a href="#" class="navigation-link">Discover</a>
+            <a href="#" class="navigation-link">Contribute</a>
+            <a href="#" class="navigation-link">Features</a>
+            <a href="#" class="navigation-link">Team</a>
+            <a href="#" class="navigation-hamburger-button">=</a>
           </div>
           <div class="navigation-cta">
             <a href="https://howto-frontend.netlify.com/">
@@ -43,6 +44,15 @@
             </a>
           </div>
         </nav>
+        <div class="navigation-links-mobile">
+          <div class="navigation-link-mobile">Learn</div>
+          <div class="navigation-link-mobile">Discover</div>
+          <div class="navigation-link-mobile">Contribute</div>
+          <div class="navigation-link-mobile">Features</div>
+          <div class="navigation-link-mobile">Team</div>
+          <div class="navigation-link-mobile">Login</div>
+          <div class="navigation-link-mobile">Sign Up</div>
+        </div>
         <div class="header-main">
           <div class="header-description-container">
             <div class="header-description">
@@ -56,21 +66,21 @@
                 learning everyday.
               </p>
               <a href="https://howto-frontend.netlify.com/">
-                <button>Join Now</button>
+                <button class="header-description-joinnow">Join Now</button>
               </a>
             </div>
           </div>
           <div class="header-image">
             <img
               class="header-image-img"
-              src="./assets/header-image-001.svg"
+              src="./assets/header-image-color-001.svg"
               alt=""
             />
           </div>
         </div>
       </header>
-      <div class="content-panel learn-content">
-        <section class="text-content">
+      <section class="content-panel">
+        <div class="content-text">
           <h2>Learn</h2>
           <p>
             Just like you can train your body to run an 8-minute mile or do a
@@ -88,14 +98,17 @@
             act of learning something new, and then repeating it, helps improve
             your overall recall.
           </p>
-        </section>
-        <img
-          src="./assets/learn-image-svg-001.svg"
-          alt="A person leaning against a very large cell phone"
-        />
-      </div>
-      <div class="content-panel discover-content">
-        <section class="text-content">
+        </div>
+        <div class="content-image">
+          <img
+            class="content-image-img"
+            src="./assets/learn-image-color-001.svg"
+            alt="A person leaning against a very large cell phone"
+          />
+        </div>
+      </section>
+      <section class="content-panel reverse">
+        <div class="content-text">
           <h2>Discover</h2>
           <p>
             Just like you can train your body to run an 8-minute mile or do a
@@ -113,14 +126,17 @@
             act of learning something new, and then repeating it, helps improve
             your overall recall.
           </p>
-        </section>
-        <img
-          src="./assets/discover-image-001.svg"
-          alt="A person in the center ofa swirl of documents"
-        />
-      </div>
-      <div class="content-panel contribute-content">
-        <section class="text-content">
+        </div>
+        <div class="content-image">
+          <img
+            class="content-image-img"
+            src="./assets/discover-image-color-001.svg"
+            alt="A person in the center ofa swirl of documents"
+          />
+        </div>
+      </section>
+      <section class="content-panel contribute-content">
+        <div class="content-text">
           <h2>Contribute</h2>
           <p>
             Just like you can train your body to run an 8-minute mile or do a
@@ -138,12 +154,15 @@
             act of learning something new, and then repeating it, helps improve
             your overall recall.
           </p>
-        </section>
-        <img
-          src="./assets/contribute-image-001.svg"
-          alt="A person pinning screenshots to a wall"
-        />
-      </div>
+        </div>
+        <div class="content-image">
+          <img
+            class="content-image-img"
+            src="./assets/contribute-image-color-001.svg"
+            alt="A person pinning screenshots to a wall"
+          />
+        </div>
+      </section>
       <section class="team">
         <div class="team-title"><h2>Meet The Team</h2></div>
         <div class="team-cards">
@@ -179,26 +198,27 @@
           </div>
         </div>
       </section>
-
-      <footer>
-        <img
-          src="./assets/footer-image-001.svg"
-          alt="Person sitting with tablet computer in front of a flowchart"
-          class="footer-img"
-        />
-        <nav class="footer-nav">
-          <a href="#">Learn</a>
-          <a href="#">Discover</a>
-          <a href="#">Contribute</a>
-          <a href="#">Features</a>
-          <a href="#">Team</a>
-        </nav>
-        <a href="https://howto-frontend.netlify.com/">
-          <button class="footer-btn">
-            Join Now
-          </button>
-        </a>
-      </footer>
     </div>
+    <footer>
+      <img
+        src="./assets/footer-image-color-001.svg"
+        alt="Person sitting with tablet computer in front of a flowchart"
+        class="footer-img"
+      />
+      <nav class="footer-nav">
+        <a href="#">Learn</a>
+        <a href="#">Discover</a>
+        <a href="#">Contribute</a>
+        <a href="#">Features</a>
+        <a href="#">Team</a>
+      </nav>
+      <a href="https://howto-frontend.netlify.com/">
+        <button class="footer-btn">
+          Join Now
+        </button>
+      </a>
+    </footer>
+    <!-- JavaScript for mobile menu -->
+    <script src="./js/main.js"></script>
   </body>
 </html>
