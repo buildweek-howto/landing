@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
 
   .navigation-logo {
     padding: 0 20px 0 0;
@@ -34,6 +35,15 @@
     @media @tablet {
       display: block;
     }
+    .hide{
+      display: none;
+    }
+    .display{
+      background-color: red;
+    }
+    .close {
+      display: none;
+    }
   }
 
   .navigation-cta {
@@ -59,6 +69,10 @@
   .navigation-cta-signup {
     .btn-cta-normal();
   }
+
+  @media @mobile {
+    margin: 0;
+  }
 }
 
 .navigation-links-mobile {
@@ -66,5 +80,31 @@
 }
 
 .hidden-mobile-menu {
-  display: block;
+  display: flex;
+}
+
+.navigation-links-mobile {
+  top: 60px;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  flex-direction: column;
+
+  .navigation-link-mobile {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-bottom: 1px solid @dark-grey;
+    background-color: @primary;
+
+    &:hover {
+      background-color: @white;
+      color: @primary
+    }
+  }
+
+  .navigation-link-mobile:last-child {
+    border: none;
+  }
 }

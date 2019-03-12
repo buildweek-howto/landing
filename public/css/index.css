@@ -70,6 +70,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
 }
 .navigation .navigation-logo {
   padding: 0 20px 0 0;
@@ -107,6 +108,15 @@ p {
     display: block;
   }
 }
+.navigation .navigation-hamburger-button .hide {
+  display: none;
+}
+.navigation .navigation-hamburger-button .display {
+  background-color: red;
+}
+.navigation .navigation-hamburger-button .close {
+  display: none;
+}
 .navigation .navigation-cta {
   display: flex;
   flex-direction: row;
@@ -142,11 +152,38 @@ p {
   background-color: #FFFFFF;
   color: #2EC4B6;
 }
+@media (max-width: 500px) {
+  .navigation {
+    margin: 0;
+  }
+}
 .navigation-links-mobile {
   display: none;
 }
 .hidden-mobile-menu {
-  display: block;
+  display: flex;
+}
+.navigation-links-mobile {
+  top: 60px;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  flex-direction: column;
+}
+.navigation-links-mobile .navigation-link-mobile {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-bottom: 1px solid #444444;
+  background-color: #2EC4B6;
+}
+.navigation-links-mobile .navigation-link-mobile:hover {
+  background-color: #FFFFFF;
+  color: #2EC4B6;
+}
+.navigation-links-mobile .navigation-link-mobile:last-child {
+  border: none;
 }
 .team {
   margin: 60px 0;
