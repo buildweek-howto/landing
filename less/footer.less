@@ -7,9 +7,17 @@ footer {
   flex-direction: column;
   align-items: center;
 
+  @media @tablet {
+    padding: 80px 7.5%;
+  }
+
+  @media @mobile {
+    padding: 80px 12.5%;
+  }
+
   //Still figuring out how to get background color to extend; for now...
   // border-radius: 25px;
-  
+
   img {
     margin: 0 auto 40px;
     max-width: 500px;
@@ -19,14 +27,13 @@ footer {
   nav {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 60%;
 
     margin-bottom: 40px;
 
     @media @mobile {
       flex-direction: column;
       align-items: center;
-
     }
 
     a {
@@ -38,13 +45,13 @@ footer {
       }
 
       @media @mobile {
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-      
-      &:last-of-type {
-        margin-bottom: 0;
+        font-size: 2.4rem;
+        margin-bottom: 20px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
-    }
     }
   }
 
@@ -54,6 +61,6 @@ footer {
     @media @mobile {
       font-size: 2rem;
       padding: 24px 40px;
-  }
+    }
   }
 }
