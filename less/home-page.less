@@ -10,8 +10,31 @@
   flex-direction: row;
   margin: 60px 0;
 
+  @media @tablet {
+    .tablet-margin();
+
+    .image-straight {
+      margin-left: 7.5%;
+    }
+    .image-reverse {
+      margin-right: 7.5%;
+    }
+  }
+  @media @mobile {
+    .mobile-margin();
+    flex-direction: column;
+    .image-straight,
+    .image-reverse {
+      margin: 0 auto;
+    }
+  }
+
   .content-text {
     width: 500px;
+
+    @media @tablet {
+      width: 100%;
+    }
     @media @mobile {
       width: 100%;
     }
@@ -20,9 +43,6 @@
   .content-image-img {
     width: 100%;
     height: auto;
-  }
-  @media @mobile {
-    flex-direction: column;
   }
 }
 .reverse {
