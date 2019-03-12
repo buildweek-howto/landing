@@ -5,12 +5,19 @@
   .header-main {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
   }
 
   .header-description-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    .header-description-joinnow {
+      .btn-cta-wide(@bg-button);
+    }
   }
 
   .header-image-img {
