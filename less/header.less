@@ -15,9 +15,23 @@
     @media @tablet {
       padding: 20px 0 40px 0;
       justify-content: space-between;
+
+      h1 {
+        font-size: @font-size-big-tablet;
+        margin-bottom: 40px;
+      }
+
+      p {
+        display: none;
+      }
     }
     @media @mobile {
       flex-direction: column-reverse;
+
+      h1 {
+        font-size: @font-size-big;
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -27,6 +41,9 @@
     justify-content: center;
 
     .header-description {
+      display: flex;
+      flex-direction: column;
+
       @media @mobile {
         display: flex;
         flex-direction: column;
@@ -35,6 +52,7 @@
     }
 
     .header-description-button-container {
+      align-self: center;
       @media @mobile {
         display: flex;
         flex-direction: column;
