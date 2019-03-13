@@ -1,4 +1,9 @@
 .navigation {
+  // todo: use variables:
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: .1rem;
+  // end todo
   margin: 15px 0 25px 0;
   display: flex;
   flex-direction: row;
@@ -17,11 +22,14 @@
     .navigation-link {
       color: @font-color-content;
       text-decoration: none;
-      padding: 12px 20px;
+      padding: 15px 20px;
+      border-bottom: 1px solid @white;
 
       &:hover {
-        color: @white;
-        background-color: @primary;
+        // border-radius: 20px;
+        // color: @white;
+        // background-color: @primary;
+        border-bottom: 1px solid @primary;
       }
 
       @media @mobile {
@@ -58,9 +66,12 @@
     }
 
     .navigation-cta-login {
+      width: 100px;
+      text-align: center;
       color: @font-color-content;
       padding: 12px 20px;
-
+      border: 1px solid @white;
+      
       &:hover {
         color: @white;
         background-color: @secondary;
@@ -68,7 +79,8 @@
       }
     }
     .navigation-cta-signup {
-      .btn-cta-normal(@bg-button, @font-color-button);
+      width: 100px;
+      .btn-cta-normal(@font-color-button, @bg-button, @bg-button);
     }
   } // .navigation-cta
 

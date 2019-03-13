@@ -1,4 +1,8 @@
 footer {
+  // todo: use variables
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  // end todo
   background: @bg-footer;
   width: 100%;
   padding: 80px 0;
@@ -16,9 +20,9 @@ footer {
   }
 
   img {
-    margin: 0 auto 40px;
-    max-width: 500px;
     width: 100%;
+    max-width: 500px;
+    margin: 0 auto 40px;
   }
 
   nav {
@@ -59,10 +63,8 @@ footer {
 
   button {
     .btn-cta-wide(@secondary, @white);
-
     @media @mobile {
-      font-size: 2rem;
-      padding: 24px 40px;
+      width: 80%;
     }
   }
 }
