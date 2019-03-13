@@ -1,47 +1,36 @@
-// Mobile header menu
+class MobileMenu {
+  constructor(element) {
+    this.element = element;
 
-let mobileMenu = document.querySelector(".navigation-links-mobile");
-let hamburgerButton = document.querySelector(".navigation-hamburger-button");
-let hamburgerButtonImg = document.querySelector(
-  ".navigation-hamburger-button-img"
-);
+    this.button = document.querySelector(".navigation-hamburger-button-img");
 
-hamburgerButton.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden-mobile-menu");
+    this.links = document.querySelectorAll(".navigation-link-mobile");
+    console.log(this.links);
 
-  if (mobileMenu.classList.contains("hidden-mobile-menu")) {
-    hamburgerButtonImg.setAttribute(
-      "src",
-      "./assets/hamburger-menu-icon-close.svg"
-    );
-  } else {
-    hamburgerButtonImg.setAttribute(
-      "src",
-      "./assets/hamburger-menu-icon-open.svg"
+    this.button.addEventListener("click", () => {
+      this.toggleMenu();
+    });
+
+    this.links.forEach(link =>
+      link.addEventListener("click", () => this.toggleMenu())
     );
   }
-});
 
-// Button drop shadows
+  toggleMenu() {
+    if (!this.element.classList.contains("hidden-mobile-menu")) {
+      TweenMax.set(this.element, { opacity: 0 });
+      TweenMax.to(this.element, 0.5, {
+        className: "+= hidden-mobile-menu",
+        opacity: 1
+      });
+      this.button.src = "./assets/hamburger-menu-icon-close.svg";
+    } else {
+      this.element.classList.remove("hidden-mobile-menu");
+      this.button.src = "./assets/hamburger-menu-icon-open.svg";
+    }
+  }
+}
 
-// const buttons = document.querySelectorAll("button");
-// console.log(buttons);
-// buttons.forEach(button => {
-//   button.addEventListener("mouseover", function(event) {
-//     TweenMax.to(button, 0.5, { className: "+= drop-shadow" });
-//   });
-
-//   button.addEventListener("mouseleave", function(event) {
-//     TweenMax.to(button, 0.5, { className: "-= drop-shadow" });
-//   });
-// });
-
-// Mobile menu drop-down animation
-
-// let burgerButton = document.querySelector(".navigation-hamburger-button-img");
-// console.log(burgerButton);
-// let mobileMenu = document.querySelector(".navigation-links-mobile");
-// console.log(mobileMenu);
-// burgerButton.addEventListener("click", function(event) {
-//   TweenMax.to(mobileMenu, 2.5, { className: "+= hidden-mobile-menu" });
-// });
+const mobileMenu = new MobileMenu(
+  document.querySelector(".navigation-links-mobile")
+);
