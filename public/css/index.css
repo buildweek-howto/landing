@@ -202,6 +202,10 @@ p {
 .navigation .navigation-logo {
   padding: 0 20px 0 0;
 }
+.navigation .navigation-logo-fixed {
+  position: fixed;
+  display: none;
+}
 .navigation .navigation-links {
   display: flex;
   flex-direction: row;
