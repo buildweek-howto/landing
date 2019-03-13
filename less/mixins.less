@@ -1,3 +1,9 @@
+.navigation-links-uppercase() {
+  font-size: @font-size-nav-links;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
 .btn-cta-normal(@bg-button, @font-color-button, @border-button) {
   text-transform: inherit;
   font-size: inherit;
@@ -16,9 +22,9 @@
   }
 }
 
-.btn-cta-wide(@bg-button, @font-color-button) {
+.btn-cta-wide(@bg-button, @font-color-button, @border-button) {
   font-size: @font-size-normal;
-  border: 1px solid @bg-button;
+  border: 1px solid @border-button;
   background-color: @bg-button;
   color: @font-color-button;
   border-radius: 20px;
