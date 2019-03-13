@@ -1,10 +1,9 @@
-.btn-cta-normal() {
+.btn-cta-normal(@bg-button, @font-color-button) {
   border: 1px solid @bg-button;
   background-color: @bg-button;
   color: @font-color-button;
   border-radius: 20px;
   padding: 12px 20px;
-  width: 100px;
   text-align: center;
   font-size: @font-size-normal;
   cursor: pointer;
@@ -15,7 +14,7 @@
   }
 }
 
-.btn-cta-wide(@bg-button) {
+.btn-cta-wide(@bg-button, @font-color-button) {
   border: 1px solid @bg-button;
   background-color: @bg-button;
   color: @font-color-button;
@@ -29,6 +28,10 @@
   &:hover {
     background-color: @font-color-button;
     color: @bg-button;
+  }
+  @media @mobile {
+    padding: 20px 10px;
+    width: 100%;
   }
 }
 

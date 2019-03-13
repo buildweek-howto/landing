@@ -27,9 +27,6 @@
       @media @mobile {
         display: none;
       }
-      // @media @tablet {
-      //   display: none;
-      // }
     }
   } // .navigation-links
 
@@ -38,17 +35,8 @@
     @media @mobile {
       display: block;
     }
-    // @media @tablet {
-    //   display: block;
-    // }
-    .hide {
-      display: none;
-    }
-    .display {
-      background-color: red;
-    }
-    .close {
-      display: none;
+    .navigation-hamburger-button-img {
+      width: 25px;
     }
   }
 
@@ -80,7 +68,7 @@
       }
     }
     .navigation-cta-signup {
-      .btn-cta-normal();
+      .btn-cta-normal(@bg-button, @font-color-button);
     }
   } // .navigation-cta
 
@@ -95,16 +83,9 @@
   }
 } // .navigation
 
-.navigation-links-mobile {
-  display: none;
-}
-
-.hidden-mobile-menu {
-  display: flex;
-}
-
 // MOBILE MENU
 .navigation-links-mobile {
+  display: none;
   top: 60px;
   width: 100%;
   position: absolute;
@@ -147,3 +128,15 @@
     border: none;
   }
 } // navigation-links-mobile
+
+.hidden-mobile-menu {
+  display: flex;
+  // bug fix: mobile menu toggle displaying an all viewports
+  @media (min-width: 500px) {
+    display: none;
+  }
+}
+
+.rotate {
+  transform: rotate(90deg)
+}

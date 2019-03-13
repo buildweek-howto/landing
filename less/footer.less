@@ -15,9 +15,6 @@ footer {
     padding: 80px 12.5%;
   }
 
-  //Still figuring out how to get background color to extend; for now...
-  // border-radius: 25px;
-
   img {
     margin: 0 auto 40px;
     max-width: 500px;
@@ -61,8 +58,7 @@ footer {
   }
 
   button {
-    .btn-cta-wide(@secondary);
-    cursor: pointer;
+    .btn-cta-wide(@secondary, @white);
 
     @media @mobile {
       font-size: 2rem;

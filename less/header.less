@@ -1,9 +1,17 @@
 .header {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid @border-section;
 
   h1 {
     line-height: 1.1;
+    @media @tablet {
+      font-size: @font-size-big-responsive;
+    }
+    @media @mobile {
+      margin-top: 30px;
+      font-size: @font-size-big-responsive;
+    }
   }
 
   .header-main {
@@ -15,23 +23,9 @@
     @media @tablet {
       padding: 20px 0 40px 0;
       justify-content: space-between;
-
-      h1 {
-        font-size: @font-size-big-tablet;
-        margin-bottom: 40px;
-      }
-
-      p {
-        display: none;
-      }
     }
     @media @mobile {
       flex-direction: column-reverse;
-
-      h1 {
-        font-size: @font-size-big;
-        margin-bottom: 20px;
-      }
     }
   }
 
@@ -41,52 +35,66 @@
     justify-content: center;
 
     .header-description {
-      display: flex;
-      flex-direction: column;
-
       @media @mobile {
+        text-align: center;
         display: flex;
         flex-direction: column;
-        // align-items: center;
       }
     }
 
     .header-description-button-container {
-      align-self: center;
+
+      // join now
+      .header-description-joinnow-anchor {
+        @media @mobile {
+          width: 80%;
+        }
+      }
+
+      .header-description-joinnow {
+        .btn-cta-wide(@bg-button, @white);
+      }
+      
+      // login
+      .header-description-login-anchor {
+        display: none;
+        margin: 20px 0;
+        @media @mobile {
+          display: block;
+          width: 80%;
+        }
+      }
+
+      .header-description-login {
+        .btn-cta-wide(@secondary, @white);
+      }
+
       @media @mobile {
         display: flex;
         flex-direction: column;
         align-items: center;
       }
     }
-    .header-description-joinnow-anchor {
-      margin: 20px auto;
-    }
-    .header-description-joinnow {
-      .btn-cta-wide(@bg-button);
-    }
-    .header-description-login-anchor {
-      display: none;
-      text-decoration: none;
-      @media @mobile {
-        display: block;
-      }
-    }
-    .header-description-login {
-      display: none;
-      @media @mobile {
-        display: block;
-        .btn-cta-wide(@bg-button);
-      }
-    }
-  }
+  } // header-description-container
 
   .header-image-img {
-    width: 100%;
-    height: auto;
+    width: 550px;
     padding-left: 12.5%;
-
+    
+    @media @desktop {
+      width: 550px;
+      padding-left: 4.5%;
+    }
+    @media @tablet {
+      width: 550px;
+      padding-left: 4.5%;
+    }
+    @media (max-width: 600px) {
+      width: 450px;
+    }
     @media @mobile {
+      width: 100%;
+      height: auto;
       padding: 0;
     }
   }
