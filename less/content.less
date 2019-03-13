@@ -1,25 +1,24 @@
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-
-  @media @tablet {
-    .tablet-margin();
-  }
-  @media @mobile {
-    .mobile-margin();
-  }
-  @media @desktop {
-    .desktop-margin();
-  }
-}
-
 .content-panel {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  background-color: @cream;
   padding: 120px 0;
+  border-bottom: 1px solid @border-section;
+  font-size: @font-size-content;
+  line-height: @line-height-content;
+
+  h2 {
+    @media @desktop {
+      font-size: @font-size-big-responsive;
+    }
+    @media @tablet {
+      font-size: @font-size-big-responsive;
+    }
+    @media @mobile {
+      font-size: @font-size-big-responsive;
+    }
+  }
 
   .image-straight {
     padding-right: 7.5%
@@ -44,6 +43,7 @@
     width: 100%;
     height: auto;
   }
+
   @media @mobile {
     flex-direction: column;
     padding: 60px 0;

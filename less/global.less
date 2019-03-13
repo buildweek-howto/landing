@@ -1,7 +1,12 @@
 body {
+  // overflow:hidden is used to have a clipped image
+  // on the header image when on tablet view
+  // source: https://stackoverflow.com/a/16671476/933941
+  overflow: hidden;
+  overflow-y: scroll;
   font-family: @font-content;
   font-size: @font-size-normal;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
 h1 {
