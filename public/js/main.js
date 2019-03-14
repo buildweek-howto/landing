@@ -1,5 +1,6 @@
 // Mobile menu component
 
+// RUBRIC: JAVASCRIPT FUNDAMENTALS
 class MobileMenu {
   constructor(element) {
     this.element = element;
@@ -99,3 +100,82 @@ function dontDisplayLogoFixed() {
 }
 
 // console.log(window.innerWidth);
+
+// FEATURES SAMPLE DATA:
+
+// let featuresData = [
+//   {
+//     "feature": "like and review",
+//     "imgSrc" : "https://i.imgur.com/qRIoZNu.jpg",
+//     "title": "Like and Review Posts",
+//     "description":
+//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia asperiores corporis odit voluptatum rem esse quaerat veritatis ratione impedit eius placeat, similique ad a possimus ab voluptatem tenetur! Magnam, provident velit praesentium veniam assumenda repellendus id dolore perferendis illo quidem et, quasi pariatur labore unde alias eveniet a minus! Quaerat."
+//   },
+//   {
+//     "feature": "share",
+//     "imgSrc" : "https://i.imgur.com/qRIoZNu.jpg",
+//     "title": "Share Post test title",
+//     "description":
+//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia asperiores corporis odit voluptatum rem esse quaerat veritatis ratione impedit eius placeat, similique ad a possimus ab voluptatem tenetur! Magnam, provident velit praesentium veniam assumenda repellendus id dolore perferendis illo quidem et, quasi pariatur labore unde alias eveniet a minus! Quaerat."
+//   },
+//   {
+//     "feature": "another feature test 123",
+//     "imgSrc" : "https://i.imgur.com/qRIoZNu.jpg",
+//     "title": "Another Feature Test 123",
+//     "description":
+//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia asperiores corporis odit voluptatum rem esse quaerat veritatis ratione impedit eius placeat, similique ad a possimus ab voluptatem tenetur! Magnam, provident velit praesentium veniam assumenda repellendus id dolore perferendis illo quidem et, quasi pariatur labore unde alias eveniet a minus! Quaerat."
+//   },
+// ];
+
+// RUBRIC: APPLIED JAVASCRIPT
+
+class Features {
+  constructor(feature, index) {
+    this.section = document.createElement("section")
+    this.section.className = "content-panel"
+
+    if (index % 2 === 0) {
+      this.section.classList.add("reverse")
+    }
+
+    this.contentImage = document.createElement("div")
+    this.contentImage.className = "content-image"
+
+    this.contentImageImg = document.createElement("img")
+    this.contentImageImg.className = "content-image-img"
+    this.contentImageImg.setAttribute("src",feature.imgSrc)
+
+    if (index % 2 === 0) {
+      this.contentImageImg.classList.add("image-reverse")
+    } else {
+      this.contentImageImg.classList.add("image-straight")
+    }
+
+    this.contentText = document.createElement("div")
+    this.contentText.className = "content-text"
+
+    this.contentTextH2 = document.createElement("h2")
+    this.contentTextH2.textContent = feature.title
+
+    this.contentTextP = document.createElement("p")
+    this.contentTextP.textContent = feature.description
+
+    // append to .container
+    this.container = document.querySelector(".container")
+    this.container.appendChild(this.section)
+    this.section.appendChild(this.contentImage)
+    this.contentImage.appendChild(this.contentImageImg)
+    this.section.appendChild(this.contentText)
+    this.contentText.appendChild(this.contentTextH2)
+    this.contentText.appendChild(this.contentTextP)
+  }
+}
+
+// if there is a feature in data array
+if (featuresData[0].title) {
+
+  featuresData.forEach((feature,index)=>{
+    return new Features(feature,index)
+  })
+
+}
