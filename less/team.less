@@ -24,27 +24,27 @@
 
     .team-card-link {
       color: @font-color-content;
-      padding: 30px 50px;
-      text-align: center;
       text-decoration: none;
       transition: 0.3s;
+      
       &:hover {
         transform: scale(1.2);
       }
-      @media @tablet {
-        width: 50%;
-      }
-      @media @mobile {
-        padding: 15px 30px;
-        width: 50%;
-      }
     }
     .team-card {
-      .team-member-title {
-        margin: 0;
-        font-weight: 400;
-      }
+      display: flex;
+      justify-content: center;
+      padding: 30px 40px;
       .team-member-name {
+        text-align: center;
+        margin: 0;
+      }
+      .team-member-title {
+        color: @secondary;
+        font-size: @font-size-nav-links;
+        text-transform: uppercase;
+        font-weight: 400;
+        text-align: center;
         margin: 0;
       }
       .team-image {
@@ -60,17 +60,18 @@
         right: 0;
         height: 100%;
         width: 100%;
+        max-width: 200px;
         opacity: 0;
         transition: 0.5s ease;
         clip-path: circle(50% at 50% 50%);
         background-color: hsla(@primary, 0.6);
       }
-
+      
       &:hover .overlay {
         opacity: 1;
       }
-
-      .text {
+      
+      .overlay-text {
         color: @black;
         font-weight: 300;
         font-size: 1rem;
@@ -80,7 +81,7 @@
         left: 50%;
         text-align: center;
         transform: translate(-50%, -50%);
-
+        
         .github-icon {
           width: 100%;
         }
@@ -90,14 +91,24 @@
         width: 100%;
         max-width: 200px;
         height: auto;
-        border: 3px solid @primary;
+        border: 5px solid @primary;
+      }
+      @media @tablet {
+        width: 50%;
+      }
+      @media @mobile {
+        padding: 10px 20px;
+        width: 50%;
       }
     }
   }
   @media @desktop {
-    padding: 80px 0;
+    padding: 120px 0;
+  }
+  @media @tablet {
+    padding: 100px 0;
   }
   @media @mobile {
-    padding: 70px 0;
+    padding: 60px 0;
   }
 }

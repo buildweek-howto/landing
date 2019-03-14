@@ -7,8 +7,9 @@
   border-bottom: 1px solid @border-section;
   font-size: @font-size-content;
   line-height: @line-height-content;
-
+  
   h2 {
+    line-height: @line-height-content-h2;
     @media @desktop {
       font-size: @font-size-big-responsive;
     }
@@ -16,6 +17,7 @@
       font-size: @font-size-big-responsive;
     }
     @media @mobile {
+      margin: 30px 0 0 0;
       font-size: @font-size-big-responsive;
     }
   }
@@ -42,6 +44,15 @@
   .content-image-img {
     width: 100%;
     height: auto;
+  }
+
+  @media @desktop {
+    padding: 120px 0;
+  }
+
+  @media @tablet {
+    font-size: @font-size-normal;
+    padding: 80px 0;
   }
 
   @media @mobile {
