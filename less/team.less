@@ -1,5 +1,6 @@
 .team {
-  padding: 180px 4.5% 120px;
+  padding: 180px 6.3% 70px;
+  margin: 100px 0 0 0;
   background-color: @secondary;
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
@@ -8,17 +9,22 @@
     text-align: center;
     & h2 {
       color: @white;
+      text-transform: uppercase;
+      font-weight: 400;
       // font-size: @font-size-big-responsive;
-      margin-bottom: 40px;
       @media @desktop {
-        font-size: @font-size-big-responsive;
+        // font-size: @font-size-big-responsive;
       }
       @media @tablet {
         font-size: @font-size-big-responsive;
       }
       @media @mobile {
-        font-size: @font-size-big-responsive;
+        font-size: 4.4rem;
       }
+    }
+    & p {
+      color: @white;
+      margin: 0 0 40px 0;
     }
   }
 
@@ -99,7 +105,11 @@
         height: auto;
         border: 5px solid @primary;
       }
+      @media @desktop {
+        padding: 30px 25px;
+      }
       @media @tablet {
+        padding: 30px 20px;
         width: 50%;
       }
       @media @mobile {
@@ -109,12 +119,21 @@
     }
   }
   @media @desktop {
-    padding: 200px 0 120px;
+    padding: 300px 0 70px;
+    margin: -20px 0 0 0;
+    -webkit-clip-path: polygon(50% 12%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
+    clip-path: polygon(50% 12%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
   }
   @media @tablet {
-    padding: 220px 0 100px;
+    padding: 360px 0 50px;
+    margin: -150px 0 0 0;
+    -webkit-clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
+    clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
   }
   @media @mobile {
-    padding: 260px 0 60px;
+    padding: 320px 4.5% 50px;
+    margin: -130px 0 0 0;
+    -webkit-clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
+    clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
   }
 }

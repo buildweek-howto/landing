@@ -468,7 +468,8 @@ p {
   }
 }
 .team {
-  padding: 180px 4.5% 120px;
+  padding: 180px 6.3% 70px;
+  margin: 100px 0 0 0;
   background-color: #586ba4;
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
@@ -478,12 +479,10 @@ p {
 }
 .team .team-title h2 {
   color: #ffffff;
-  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 @media (max-width: 960px) {
-  .team .team-title h2 {
-    font-size: 4.8rem;
-  }
 }
 @media (max-width: 768px) {
   .team .team-title h2 {
@@ -492,8 +491,12 @@ p {
 }
 @media (max-width: 500px) {
   .team .team-title h2 {
-    font-size: 4.8rem;
+    font-size: 4.4rem;
   }
+}
+.team .team-title p {
+  color: #ffffff;
+  margin: 0 0 40px 0;
 }
 .team .team-cards {
   display: flex;
@@ -567,8 +570,14 @@ p {
   height: auto;
   border: 5px solid #2ec4b6;
 }
+@media (max-width: 960px) {
+  .team .team-cards .team-card {
+    padding: 30px 25px;
+  }
+}
 @media (max-width: 768px) {
   .team .team-cards .team-card {
+    padding: 30px 20px;
     width: 50%;
   }
 }
@@ -580,17 +589,26 @@ p {
 }
 @media (max-width: 960px) {
   .team {
-    padding: 200px 0 120px;
+    padding: 300px 0 70px;
+    margin: -20px 0 0 0;
+    -webkit-clip-path: polygon(50% 12%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
+    clip-path: polygon(50% 12%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
   }
 }
 @media (max-width: 768px) {
   .team {
-    padding: 220px 0 100px;
+    padding: 360px 0 50px;
+    margin: -150px 0 0 0;
+    -webkit-clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
+    clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
   }
 }
 @media (max-width: 500px) {
   .team {
-    padding: 260px 0 60px;
+    padding: 320px 4.5% 50px;
+    margin: -130px 0 0 0;
+    -webkit-clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
+    clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
   }
 }
 .footer {
@@ -599,7 +617,7 @@ p {
   letter-spacing: 0.1rem;
   background: #2ec4b6;
   width: 100%;
-  padding: 140px 0 40px;
+  padding: 110px 0 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -703,7 +721,7 @@ p {
 }
 @media (max-width: 768px) {
   .footer {
-    padding: 140px 7.5% 40px;
+    padding: 110px 7.5% 40px;
   }
 }
 @media (max-width: 500px) {
