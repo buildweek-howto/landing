@@ -1,19 +1,30 @@
 .team {
-  padding: 60px 0;
+  padding: 180px 6.3% 70px;
+  margin: 100px 0 0 0;
+  background-color: @secondary;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
 
   .team-title {
     text-align: center;
     & h2 {
-      margin-bottom: 15px;
+      color: @white;
+      text-transform: uppercase;
+      font-weight: 400;
+      // font-size: @font-size-big-responsive;
       @media @desktop {
-        font-size: @font-size-big-responsive;
+        // font-size: @font-size-big-responsive;
       }
       @media @tablet {
         font-size: @font-size-big-responsive;
       }
       @media @mobile {
-        font-size: @font-size-big-responsive;
+        font-size: 4.4rem;
       }
+    }
+    & p {
+      color: @white;
+      margin: 0 0 40px 0;
     }
   }
 
@@ -23,48 +34,106 @@
     justify-content: center;
 
     .team-card-link {
-      max-width: 280px;
       color: @font-color-content;
-      padding: 40px 60px;
-      text-align: center;
       text-decoration: none;
-      transition: .3s;
+      transition: 0.3s;
+
       &:hover {
-        transform: scale(1.2)
-      }
-      @media @tablet {
-        padding: 30px 0;
-        width: 50%;
-      }
-      @media @mobile {
-        padding: 15px 30px;
-        width: 50%;
+        transform: scale(1.2);
       }
     }
     .team-card {
-
-      .team-member-title {
-        margin: 0;
-        font-weight: 400;
-      }
+      display: flex;
+      justify-content: center;
+      padding: 30px 40px;
       .team-member-name {
+        color: @white;
+        text-align: center;
         margin: 0;
       }
+      .team-member-title {
+        color: @primary;
+        font-size: @font-size-nav-links;
+        text-transform: uppercase;
+        font-weight: 400;
+        text-align: center;
+        margin: 0;
+      }
+      .team-image {
+        position: relative;
+      }
+      // How TO - Image Hover Overlay:
+      // source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade
+      .overlay {
+        position: absolute;
+        top: -2px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 200px;
+        opacity: 0;
+        transition: 0.5s ease;
+        clip-path: circle(50% at 50% 50%);
+        background-color: hsla(@primary, 0.6);
+      }
 
+      &:hover .overlay {
+        opacity: 1;
+      }
+
+      .overlay-text {
+        color: @black;
+        font-weight: 300;
+        font-size: 1rem;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+
+        .github-icon {
+          width: 100%;
+        }
+      }
       .team-img {
         border-radius: 50%;
         width: 100%;
         max-width: 200px;
         height: auto;
-        border: 3px solid @primary;
-        
-        &:hover {
-
-        }
+        border: 5px solid @primary;
+      }
+      @media @desktop {
+        padding: 30px 25px;
+      }
+      @media @tablet {
+        padding: 30px 20px;
+        width: 50%;
+      }
+      @media @mobile {
+        padding: 10px 20px;
+        width: 50%;
       }
     }
   }
+  @media @desktop {
+    padding: 300px 0 70px;
+    margin: -20px 0 0 0;
+    -webkit-clip-path: polygon(50% 12%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
+    clip-path: polygon(50% 12%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
+  }
+  @media @tablet {
+    padding: 360px 0 50px;
+    margin: -150px 0 0 0;
+    -webkit-clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
+    clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
+  }
   @media @mobile {
-    padding: 40px 0;
+    padding: 320px 4.5% 50px;
+    margin: -130px 0 0 0;
+    -webkit-clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
+    clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
   }
 }

@@ -13,6 +13,25 @@
   .navigation-logo-fixed {
     position: fixed;
     display: none;
+    z-index: 1;
+  }
+
+  .navigation-logo-scroll {
+    // background-color: @white;
+    // padding: 0 30px;
+    padding: 0 20px 10px 0;
+    // padding-right: 20px;
+    // padding-bottom: 7px;
+    // border-radius: 20px;
+    // opacity: 0.7;
+    border-bottom: 1px solid @light-grey;
+    border-right: 1px solid @light-grey;
+    // -webkit-box-shadow: 0px 28px 72px -28px rgba(0,0,0,0.75);
+    // -moz-box-shadow: 0px 28px 72px -28px rgba(0,0,0,0.75);
+    // box-shadow: 0px 28px 72px -5px rgba(0,0,0,0.75);
+    // @media @mobile {
+    //   display: none;
+    // }
   }
 
   .navigation-links {
@@ -90,7 +109,7 @@
     align-items: center;
   }
   @media @mobile {
-    margin: 0;
+    margin: 5px 0 0 0;
     flex-direction: row;
     justify-content: space-between;
   }

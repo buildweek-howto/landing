@@ -69,12 +69,33 @@ TweenLite.fromTo(headerImg, 1.5, { x: 500 }, { ease: Expo.easeOut, x: 0 });
 // Working on fixed logo
 const logo = document.getElementsByClassName("navigation-logo")[0];
 const logoFixed = document.getElementsByClassName("navigation-logo-fixed")[0];
-console.log(logo, logoFixed);
-if (window.innerWidth > 768) {
-  window.addEventListener("scroll", function() {
-    logoFixed.style.display = "block";
-    logo.style.visibility = "hidden";
-  });
+// console.log(logo, logoFixed);
+
+window.addEventListener("scroll", function() {
+  if (window.innerWidth > 768) {
+    displayLogoFixed();
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768) {
+        displayLogoFixed();
+      } else {
+        dontDisplayLogoFixed();
+      }
+    });
+  } else {
+    dontDisplayLogoFixed();
+  }
+});
+
+function displayLogoFixed() {
+  logoFixed.style.display = "block";
+  logoFixed.classList.add("navigation-logo-scroll");
+  logo.style.visibility = "hidden";
 }
 
-console.log(window.innerWidth);
+function dontDisplayLogoFixed() {
+  logoFixed.style.display = "none";
+  logoFixed.classList.remove("navigation-logo-scroll");
+  logo.style.visibility = "visible";
+}
+
+// console.log(window.innerWidth);
