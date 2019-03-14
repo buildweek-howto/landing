@@ -396,6 +396,9 @@ p {
   font-size: 1.8rem;
   line-height: 1.75;
 }
+.content-panel:last-child {
+  border: none;
+}
 .content-panel h2 {
   line-height: 1.15;
 }
@@ -465,13 +468,17 @@ p {
   }
 }
 .team {
-  padding: 120px 0;
+  padding: 180px 4.5% 120px;
+  background-color: #586ba4;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
 }
 .team .team-title {
   text-align: center;
 }
 .team .team-title h2 {
-  margin-bottom: 15px;
+  color: #ffffff;
+  margin-bottom: 40px;
 }
 @media (max-width: 960px) {
   .team .team-title h2 {
@@ -507,11 +514,12 @@ p {
   padding: 30px 40px;
 }
 .team .team-cards .team-card .team-member-name {
+  color: #ffffff;
   text-align: center;
   margin: 0;
 }
 .team .team-cards .team-card .team-member-title {
-  color: #586ba4;
+  color: #2ec4b6;
   font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 400;
@@ -572,17 +580,17 @@ p {
 }
 @media (max-width: 960px) {
   .team {
-    padding: 120px 0;
+    padding: 200px 0 120px;
   }
 }
 @media (max-width: 768px) {
   .team {
-    padding: 100px 0;
+    padding: 220px 0 100px;
   }
 }
 @media (max-width: 500px) {
   .team {
-    padding: 60px 0;
+    padding: 260px 0 60px;
   }
 }
 .footer {

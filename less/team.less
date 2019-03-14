@@ -1,10 +1,15 @@
 .team {
-  padding: 120px 0;
+  padding: 180px 4.5% 120px;
+  background-color: @secondary;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
 
   .team-title {
     text-align: center;
     & h2 {
-      margin-bottom: 15px;
+      color: @white;
+      // font-size: @font-size-big-responsive;
+      margin-bottom: 40px;
       @media @desktop {
         font-size: @font-size-big-responsive;
       }
@@ -26,7 +31,7 @@
       color: @font-color-content;
       text-decoration: none;
       transition: 0.3s;
-      
+
       &:hover {
         transform: scale(1.2);
       }
@@ -36,11 +41,12 @@
       justify-content: center;
       padding: 30px 40px;
       .team-member-name {
+        color: @white;
         text-align: center;
         margin: 0;
       }
       .team-member-title {
-        color: @secondary;
+        color: @primary;
         font-size: @font-size-nav-links;
         text-transform: uppercase;
         font-weight: 400;
@@ -66,11 +72,11 @@
         clip-path: circle(50% at 50% 50%);
         background-color: hsla(@primary, 0.6);
       }
-      
+
       &:hover .overlay {
         opacity: 1;
       }
-      
+
       .overlay-text {
         color: @black;
         font-weight: 300;
@@ -81,7 +87,7 @@
         left: 50%;
         text-align: center;
         transform: translate(-50%, -50%);
-        
+
         .github-icon {
           width: 100%;
         }
@@ -103,12 +109,12 @@
     }
   }
   @media @desktop {
-    padding: 120px 0;
+    padding: 200px 0 120px;
   }
   @media @tablet {
-    padding: 100px 0;
+    padding: 220px 0 100px;
   }
   @media @mobile {
-    padding: 60px 0;
+    padding: 260px 0 60px;
   }
 }
