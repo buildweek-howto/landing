@@ -5,9 +5,11 @@
 
   h1 {
     line-height: @line-height-header-h1;
+
     @media @tablet {
       font-size: @font-size-big-responsive;
     }
+
     @media @mobile {
       margin-top: 40px;
       font-size: @font-size-big-responsive;
@@ -22,10 +24,12 @@
     @media @desktop {
       line-height: @line-height-normal;
     }
+
     @media @tablet {
       font-size: @font-size-normal;
       line-height: @line-height-normal;
     }
+
     @media @mobile{
       margin: 40px 0;
       font-size: @font-size-content;
@@ -43,17 +47,20 @@
       padding: 50px 0 60px 0;
       justify-content: space-between;
     }
+
     @media @mobile {
       flex-direction: column-reverse;
     }
   }
 
   .header-description-container {
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     .header-description {
+
       @media @mobile {
         text-align: center;
         display: flex;
@@ -63,14 +70,15 @@
 
     .header-description-button-container {
 
-      // join now
-      .header-description-joinnow-anchor {
+      // join
+      .header-description-join-anchor {
+
         @media @mobile {
           width: 80%;
         }
       }
 
-      .header-description-joinnow {
+      .header-description-join {
         .btn-cta-wide(@bg-button, @white, @bg-button);
       }
       
@@ -78,6 +86,7 @@
       .header-description-login-anchor {
         display: none;
         margin: 0 0 20px 0;
+
         @media @mobile {
           display: block;
           width: 80%;
@@ -96,25 +105,29 @@
     }
   } // header-description-container
 
+  .header-image {
+    flex-basis: 50%;
+    padding-left: 4.5%;
+
+    @media @mobile {
+      padding: 0;
+    }
+  }
+
   .header-image-img {
-    width: 550px;
-    padding-left: 12.5%;
+    max-width: 500px;
     
-    @media @desktop {
-      width: 550px;
-      padding-left: 4.5%;
-    }
-    @media @tablet {
-      width: 550px;
-      padding-left: 4.5%;
-    }
     @media (max-width: 600px) {
-      width: 450px;
+      max-width: 450px;
     }
+
+    @media (max-width: 583px) {
+      max-width: 400px;
+    }
+    
     @media @mobile {
       width: 100%;
       height: auto;
-      padding: 0;
     }
   }
 }

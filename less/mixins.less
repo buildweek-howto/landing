@@ -1,9 +1,19 @@
+.responsive-margin() {
+  margin: 0 4%;
+}
+
 .navigation-links-uppercase() {
   font-size: @font-size-nav-links;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  
   @media @tablet {
     font-size: @font-size-nav-links-small;
+  }
+  
+  @media @mobile {
+    font-size: @font-size-nav-links;
+    letter-spacing: 0.3rem;
   }
 }
 
@@ -40,20 +50,10 @@
     background-color: @font-color-button;
     color: @bg-button;
   }
+
   @media @mobile {
+    letter-spacing: .1rem;
     padding: 20px 10px;
     width: 100%;
   }
-}
-
-.desktop-margin() {
-  margin: 0 4%;
-}
-
-.tablet-margin() {
-  margin: 0 4%;
-}
-
-.mobile-margin() {
-  margin: 0 4%;
 }
