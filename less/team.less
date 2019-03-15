@@ -7,24 +7,28 @@
 
   .team-title {
     text-align: center;
+
     & h2 {
       color: @white;
       text-transform: uppercase;
       font-weight: 400;
-      // font-size: @font-size-big-responsive;
-      @media @desktop {
-        // font-size: @font-size-big-responsive;
-      }
+
       @media @tablet {
         font-size: @font-size-big-responsive;
       }
+
       @media @mobile {
         font-size: 4.4rem;
       }
     }
+
     & p {
       color: @white;
-      margin: 0 0 40px 0;
+      margin: 0 0 50px 0;
+
+      @media @tablet {
+        margin: 0 0 40px 0;
+      }
     }
   }
 
@@ -42,15 +46,19 @@
         transform: scale(1.2);
       }
     }
+
     .team-card {
       display: flex;
       justify-content: center;
       padding: 30px 40px;
+      flex-basis: 33%;
+
       .team-member-name {
         color: @white;
         text-align: center;
         margin: 0;
       }
+
       .team-member-title {
         color: @primary;
         font-size: @font-size-nav-links;
@@ -59,6 +67,7 @@
         text-align: center;
         margin: 0;
       }
+
       .team-image {
         position: relative;
       }
@@ -98,6 +107,7 @@
           width: 100%;
         }
       }
+
       .team-img {
         border-radius: 50%;
         width: 100%;
@@ -105,33 +115,38 @@
         height: auto;
         border: 5px solid @primary;
       }
+
       @media @desktop {
         padding: 30px 25px;
       }
+
       @media @tablet {
         padding: 30px 20px;
-        width: 50%;
       }
+
       @media @mobile {
         padding: 10px 20px;
-        width: 50%;
+        flex-basis: 50%;
       }
-    }
-  }
+    }// team-card
+  } // team-cards
+
   @media @desktop {
-    padding: 300px 0 70px;
+    padding: 290px 1% 70px;
     margin: -20px 0 0 0;
     -webkit-clip-path: polygon(50% 12%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
     clip-path: polygon(50% 12%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
   }
+
   @media @tablet {
-    padding: 360px 0 50px;
-    margin: -150px 0 0 0;
+    padding: 280px 1% 60px;
+    margin: -100px 0 0 0;
     -webkit-clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
     clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
   }
+
   @media @mobile {
-    padding: 320px 4.5% 50px;
+    padding: 320px 4% 60px;
     margin: -130px 0 0 0;
     -webkit-clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
     clip-path: polygon(50% 16%, 100% 25%, 100% 100%, 0 100%, 0% 25%);
